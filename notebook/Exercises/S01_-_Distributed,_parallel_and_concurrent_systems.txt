@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2022-01-31T14:20:23+01:00
+
+====== S01 - Distributed, parallel and concurrent systems ======
+
+===== Exercise 1 =====
+1. Discuss the pros and cons of distributed versus centralized systems.
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+{{./pasted_image002.png}}
+
+
+2. Discuss the relationship between distributed systems, parallel systems, cluster computing systems, grid computing systems, and cloud computing systems.
+{{./pasted_image003.png}}
+3. Discuss the relationship between distributed, pervasive, and ubiquitous systems.
+	a. Pervasive betyder at teknologien kommer ind i vores hverdag allesteder
+	b. Her er distribueret systemer nødvændige. Da de skal kommunikere på tværs.   
+4. Discuss the relationship between parallel and concurrent systems
+	a. Concurrent is weaker than parallel
+	b. Might look like it is parallel but it isnt. 
+5. Discuss pros and cons of different forms of transparency in distributed systems.
+{{./pasted_image004.png}}
+6. Discuss the fallacies of distributed systems.
+	a. Different assumptions
+		1. Latency = 0
+		2. Local computation = 0
+{{./pasted_image005.png}}
+7. Discuss current examples of noteworthy distributed systems.
+	a. Internet
+	b. DNS
+	c. Mobile infrastructure 
+	d. Big brother
+8. Discuss current examples of noteworthy pervasive systems.
+	a. Mobile phone
+	b. TV'et
+	c. Ur
+9. Discuss Flynn’s taxonomy in general and specifically in relation to distributed systems.
+
+{{./pasted_image009.png}}
+{{./pasted_image007.png}}
+{{./pasted_image008.png}}
+10. Make a small processing-step example for each of Flynn’s four computer architectural classes SISD, SIMD, MISD and MIMD by taking the concepts “instruction stream”, “data stream” and “processing unit” into account.'
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+{{./pasted_image012.png}}
+{{./pasted_image013.png}}
+11. Discuss the consequences of Amdahl’s law for distributed systems.
+{{./pasted_image014.png}}
+* Der er et overhead ifbm. synkronisering, kommunikation osv. 
+12. Discuss the relationship between Amdahl’s and Gustafson’s laws and the consequences of Gustafson’s law for distributed systems.
+{{./pasted_image016.png}}
+13. Discuss the consequences of Moore’s, Koomey’s and Kryder’s laws for distributed systems.
+{{./pasted_image017.png}}
+{{./pasted_image018.png}}
+{{./pasted_image019.png}}
+14. Discuss three types of hardware resources, three types of data resources, and three types of software resources that can usefully be shared. Give examples of their sharing as it occurs in practice in distributed systems.
+Hardware: 
+- CPU, Memory, Harddisk
+- Data Resource: 
+- Software: 
+15. Consider the WWW as an example to illustrate the concepts of clients, servers, andresource sharing. Discuss the pros and cons of the technologies HTML, URL and HTTP for information browsing? Are any of these technologies suitable as a basis for clientserver computing in general?
+HTML: 
+* Its a formal standard that all agree and all browser support. 
+* URL is also a standard format to perform DNS
+* HTTP: Standard protocol to transfer application layer data.  
+
+
+===== Exercise 2 =====
+1. If there is a tight sequential coupling between steps in a computational problem it is called inherently serial. What is the serial fraction, f , in such a problem?
+2. If there is no sequential coupling between steps in a computational problem it is called perfectly parallel (also called embarrassingly parallel). What is the serial fraction, f , in such a problem?
+3. What is the theoretical speedup in execution latency of a program if 25% of the original execution time is made twice as fast?
+4. The analysis of a program has shown a speedup of 3 when running on 4 cores. What is the serial fraction (best case) according to Amdahls law?
+
+5. Assume 10%, 20%, and 50%, respectively, of a program’s run-time is non-parallelizable and the program is supposed to run on a super-computer with 100,000 cores. Also, assume that the program runs at the same speed on all of the cores, and there are no additional overheads. Plot a graph that illustrates the theoretical parallel speedup as a function of number of cores.
+6. Assume 0.1% of a program’s run-time is non-parallelizable, that the program is supposed to run on a super-computer with 100,000 cores, and that the program runs at the same speed on all of the cores. Assume also that the program invokes a broadcast operation which adds overhead as a function of the number of cores involved. There are two broadcast implementations available. One adds a parallel overhead of BC1OH (P ) = 0.0001P , and the other adds BC2OH (P ) = 0.0005 log(P ). Find, for each of the broadcast implementations, the number of cores that maximizes the speed-up.
+
+===== Exercise 3 =====
+1. Assume a program with a serial fraction of 50%
+(a) Compute the speed-up when using 2 and 4 processors according to Amdahl’s law.
+(b) Compute the speed-up when using 2 and 4 processors according to Gustafson’s law under the assumption that the parallel work per processor is fixed.
+(c) Why are both the speed-up results different?
+2. The analysis of a program has shown a speedup of 3 when running on 4 cores. What is the serial fraction according to Gustafson’s law?
+
+===== Exercise 4 =====
+{{./pasted_image020.png}}
+===== Exercise 5 =====
+
+===== Exercise 6 =====
+
+===== Exercise 7 =====
