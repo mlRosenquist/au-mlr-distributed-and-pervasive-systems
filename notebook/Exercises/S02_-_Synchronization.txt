@@ -1,0 +1,84 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2022-02-07T12:55:56+01:00
+
+====== S02 - Synchronization ======
+Created Monday 07 February 2022
+
+===== Exercise 1: Lamport time-stamps =====
+
+=== Explain (e.g. via pseudo-code, code and/or text+illustrations) how Lamport’s algorithm may correct a wrong event ordering. ===
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+{{./pasted_image002.png}}
+
+=== Discuss a practical example of the usefulness of Lamport time-stamps ===
+A direct application of Lamport clocks is to use them as a logical timestamp that marks the version for a data value. This allows us to order values across servers.
+
+=== Implement the Lamport time-stamp algorithm in Python (use e.g. the Message Passing Interface) and demonstrate that your implementation can rectify a wrong event ordering across at least two processes (optional: the processes may reside on different nodes in a distributed system) ===
+Look in S02_py
+
+===== Exercise 2: Vector clocks =====
+
+=== Explain (e.g. via pseudo-code, code and/or text+illustrations) how the Vector Clock algorithm may correct a wrong event ordering. ===
+{{./pasted_image003.png}}
+=== Discuss and explain what the notion of “strong clock consistency” adds to Vector Clocks over Lamport Timestamps that only satisfy “clock consistency” ===
+{{./pasted_image004.png}}
+We dont have global security that an event actually happened before in clock consistency. 
+
+As mentioned before, Lamport timestamp have one big shortcoming: they can’t tell you when two events are concurrent. Going back to our example, by just checking the timestamps, we could conclude that event 3 in process 1 has happend before event 8 in process 3, but this isn’t necessarily true.
+{{./pasted_image005.png}}
+
+=== Discuss a practical example of the usefulness of Vector Clocks ===
+For the events b and l we have vector timestamps (2,0,0) & (0,0,1) respectively. Here neither b ≤ l nor l ≤ b. Hence, they are concurrent events. Similarly, d and j are concurrent events.
+
+Vector clock is also a logical clock that obeys causality and ensures partial order of events. Compared to Lamport’s clock, it can identify concurrent events efficiently as Vector Clock is represented using more space.
+
+A vector clock is a data structure used for determining the partial ordering of events in a distributed system and detecting causality violations.
+
+=== Implement the Vector clock algorithm in Python (use e.g. the Message Passing Interface) and demonstrate that your implementation can rectify a wrong event ordering across at least two processes (optional: the processes may reside on different nodes in a distributed system) ===
+S01_vector-clock.py
+
+===== Exercise 3: Precision Time Protocol =====
+
+=== 1. Discuss whether the Precision Time Protocol (PTP) is deterministic ===
+The design of PTP is non-determinstic. However, the communication channel might appear as deterministic. The higher the layer you pick the less determinstic it is.
+
+=== 2. Discuss what a packet-switched network is ===
+A packet switched network (PSN) is a type of computer communications network that groups and sends data in the form of small packets. It enables the sending of data or network packets between a source and destination node over a network channel that is shared between multiple users and/or applications.
+
+=== 3. Discuss to what extent the PTP is tailored for packet-switched networks only ===
+It is pretty tailored for packet switched network. But is most likely overkill in non-packet switched network. 
+
+=== 4. Discuss whether the PTP works on Ethernet only ===
+It can be implemented in any layer of the stack. And can be included in every protocol at the application layer. 
+
+=== 5. Discuss how the PTP can support real-time operations on Ethernet ===
+Have system where some synchronization is needed. 
+- Master initially synchronize all clients 
+- Client fix delay and offset. 
+
+Then clients do their stuff.
+
+- At an interval the master updates the clients delay and offset.
+
+Hereby all are synchronized at all times. 
+
+Everytime a client does an operation it can update its delay/offset. 
+
+=== 6. Discuss the offset correction and delay correction in the PTP ===
+{{./pasted_image006.png}}
+{{./pasted_image007.png}}
+8. Discuss whether it is fair to assume a symmetric line delay in the delay correction
+Depending on the topology. Maybe there is some congestion at different hot spots. It will be okay fair to assume symmetric. This also makes stuff easier regarding offset and delay. 
+
+9. Discuss how the PTP can play a role in the White Rabbit Project
+An extended version of PTP can be used. 
+
+To achieve sub-nanosecond synchronization White Rabbit utilizes Synchronous Ethernet (SyncE) to achieve syntonization[5] and IEEE 1588 (1588) Precision Time Protocol (PTP) to communicate time and a module for precise phase difference measurement between the master reference clock and the local clock based on phase frequency detectors.[3][6]
+
+White Rabbit uses the Precision Time Protocol to achieve sub-nanosecond accuracy. A two-way exchange of the Precision Time Protocol synchronization messages allows precise adjustment of clock phase and offset. The link delay is known precisely via accurate hardware timestamps and the calculation of delay asymmetry.
+
+11. Discuss how the PTP can play a role in 5G (5th generation mobile networks)
+New network architectures imply new approaches to addressing the various synchronization needs. This includes using Precision Time Protocol (PTP) and radio interface-based methods to synchronize distributed radio units in the evolved RAN architecture, where the upper and lower parts of the 5G New Radio (NR) RAN are separated in the different logical units: the centralized unit (CU), the distributed unit (DU) and the radio unit (RU). The baseband function in a base station is split into two logical units: a CU hosting the higher-layer protocols and a DU handling the lower layers to the user equipment (UE).
+{{./pasted_image008.png}}

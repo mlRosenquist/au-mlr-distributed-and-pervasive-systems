@@ -66,26 +66,53 @@ HTML:
 * HTTP: Standard protocol to transfer application layer data.  
 
 
-===== Exercise 2 =====
-1. If there is a tight sequential coupling between steps in a computational problem it is called inherently serial. What is the serial fraction, f , in such a problem?
-2. If there is no sequential coupling between steps in a computational problem it is called perfectly parallel (also called embarrassingly parallel). What is the serial fraction, f , in such a problem?
-3. What is the theoretical speedup in execution latency of a program if 25% of the original execution time is made twice as fast?
-4. The analysis of a program has shown a speedup of 3 when running on 4 cores. What is the serial fraction (best case) according to Amdahls law?
+===== Exercise 2: Amdahl's Law =====
+1. //**If there is a tight sequential coupling between steps in a computational problem it is called inherently serial. What is the serial fraction, f , in such a problem?**//
+100%
+2. //**If there is no sequential coupling between steps in a computational problem it is called perfectly parallel (also called embarrassingly parallel). What is the serial fraction, f , in such a problem?**//
+0%
 
-5. Assume 10%, 20%, and 50%, respectively, of a program’s run-time is non-parallelizable and the program is supposed to run on a super-computer with 100,000 cores. Also, assume that the program runs at the same speed on all of the cores, and there are no additional overheads. Plot a graph that illustrates the theoretical parallel speedup as a function of number of cores.
-6. Assume 0.1% of a program’s run-time is non-parallelizable, that the program is supposed to run on a super-computer with 100,000 cores, and that the program runs at the same speed on all of the cores. Assume also that the program invokes a broadcast operation which adds overhead as a function of the number of cores involved. There are two broadcast implementations available. One adds a parallel overhead of BC1OH (P ) = 0.0001P , and the other adds BC2OH (P ) = 0.0005 log(P ). Find, for each of the broadcast implementations, the number of cores that maximizes the speed-up.
+3. //**What is the theoretical speedup in execution latency of a program if 25% of the original execution time is made twice as fast?**//
+{{./pasted_image021.png}}
+{{./pasted_image024.png}}
 
-===== Exercise 3 =====
+4. //**The analysis of a program has shown a speedup of 3 when running on 4 cores. What is the serial fraction (best case) according to Amdahls law?**//
+//Speedup(f,4)=1/(f+(1-f)/4)=3//
+//1=3*(f+(1-f)/4)//
+1=3f + 3/4-3f/4
+1/4=3f-3f/4
+1= 12f-3f
+1 = 9f
+1/9=f
+Here the serial fraction is 1/9
+5. //**Assume 10%, 20%, and 50%, respectively, of a program’s run-time is non-parallelizable and the program is supposed to run on a super-computer with 100,000 cores. Also, assume that the program runs at the same speed on all of the cores, and there are no additional overheads. Plot a graph that illustrates the theoretical parallel speedup as a function of number of cores.**//
+{{./pasted_image022.png}}
+6. //**Assume 0.1% of a program’s run-time is non-parallelizable, that the program is supposed to run on a super-computer with 100,000 cores, and that the program runs at the same speed on all of the cores. Assume also that the program invokes a broadcast operation which adds overhead as a function of the number of cores involved. There are two broadcast implementations available. One adds a parallel overhead of BC1OH (P ) = 0.0001P , and the other adds BC2OH (P ) = 0.0005 log(P ). Find, for each of the broadcast implementations, the number of cores that maximizes the speed-up.**//
+{{./pasted_image026.png}}
+
+===== Exercise 3: Gustafson's law =====
 1. Assume a program with a serial fraction of 50%
 (a) Compute the speed-up when using 2 and 4 processors according to Amdahl’s law.
+//Speedup(0.5,2)=1/(0.5+(1-0.5)/2)=1/0.75=4/3=1.33//
+//Speedup(0.5,4)=1/(0.5+(1-0.5)/4)=1/0.625=1.6//
 (b) Compute the speed-up when using 2 and 4 processors according to Gustafson’s law under the assumption that the parallel work per processor is fixed.
+//Speedup(0.5,2)=0.5 + 2(1-0.5)=1.5//
+//Speedup(0.5,4)=0.5 + 4(1-0.5)=2.5//
 (c) Why are both the speed-up results different?
+{{./pasted_image027.png}}
 2. The analysis of a program has shown a speedup of 3 when running on 4 cores. What is the serial fraction according to Gustafson’s law?
+f + 4(1-f)=3
+f + 4-4f  =3
+-3f = -1
+f = 1/3
 
-===== Exercise 4 =====
+===== Exercise 4: Critical Path =====
 {{./pasted_image020.png}}
-===== Exercise 5 =====
+(a)
+First: Critical path = 7,
+Second: Critical Path = 3
 
-===== Exercise 6 =====
-
-===== Exercise 7 =====
+(b)
+First: n-1
+Second: log_2(n) rounded up
+{{./pasted_image029.png}}
