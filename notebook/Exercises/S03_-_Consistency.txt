@@ -1,0 +1,54 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2022-02-14T13:39:57+01:00
+
+====== S03 - Consistency ======
+
+
+===== 1. Discuss the reasons for data replication in distributed systems and challenges associated herewith =====
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+
+===== 2. Discuss the CAP and PACELC theorems and clarify how it relates to replication and consistency in distributed systems =====
+CAP: We must choose between availability and consistency. 
+- We can not update data on unaivailable systems. 
+PACELC: We must choose between latency and consistency.
+- Increases latency to update data on unavailabe resources.   
+{{./pasted_image002.png}}
+{{./pasted_image003.png}}
+===== 3. Discuss the need for augmenting CAP with PACELC =====
+Because network partitions are most likely less frequent. And therefore CAP is not relevent. In the newer years the systems are more operational. However, latency will increase as more consistent the systems needs to be. 
+
+
+===== 4. Discuss the differences between strong and weak consistency =====
+Strong consistency: All transactions needs to be complete. 
+Weak consistency: We can complete a transaction and then ripple later. 
+{{./pasted_image004.png}}
+{{./pasted_image005.png}}
+===== 5. Discuss the need for weak consistency =====
+In many applications, strong consistency is not needed. And weak consistency is fine. Strong consistency will in these situtation be overkill. Therefore we need weak consistency, to keep the data update but not update instantly. 
+
+
+===== 6. Discuss the strong “linearizable consistency” model =====
+{{./pasted_image006.png}}
+
+===== 7. Discuss the weak “eventual consistency” model =====
+{{./pasted_image007.png}}
+
+===== 8. Discuss the eventual consistency model variations (see reading by Werner Vogels) =====
+
+
+==== •Causal consistency ====
+{{./pasted_image008.png}}
+
+==== •Read your writes consistency ====
+{{./pasted_image009.png}}
+
+==== •Session consistency ====
+* {{./pasted_image010.png}}
+* {{./pasted_image011.png}}
+==== •Monotonic read consistency ====
+{{./pasted_image012.png}}
+
+==== •Monotonic write consistency ====
+{{./pasted_image013.png}}

@@ -1,0 +1,82 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2022-02-14T13:39:50+01:00
+
+====== S03 - Leader Election ======
+
+===== 1. In general, why and when is leader election relevant in distributed systems? =====
+
+
+==== (a) Discuss applications that would / would not work without leader election. ====
+- Wireless sensor network til at finde den der har bedst ressourcer. 
+- Docker/kubernets til at gøre forskelige handlinger 
+- Ressourcer management. 
+- Database management. Alle writes går i gennem leader. 
+
+- Hvis det er noget lokalt, hvor det er overkill. 
+- Hvor det ikke er nødvændigt. 
+
+
+===== 2. Does leader election entail a computational and/or network burden? =====
+
+
+==== (a) If so, how can time complexity be used as a metric for the computational burden? ====
+The lower the time complexity, the better the algorithm.
+
+
+==== (b) If so, how can message complexity be used as a metric for the network burden? ====
+The less message sent the better the algorithm. 
+
+
+===== 3. Discuss the mechanics of the presented leader election algorithms, e.g. by considering =====
+
+
+==== (a) Concretely, how do they function? ====
+{{./pasted_image.png}}
+
+{{./pasted_image001.png}}
+
+{{./pasted_image002.png}}
+{{./pasted_image003.png}}
+
+==== (b) What is their scope of applicability (i.e. their problem and application domains)? ====
+Bully:
+- 
+LCR:
+- 
+MAH:
+- En eller anden ressource, hvor vi skal finde bedste i netværk. 
+HS: 
+
+
+==== (c) Discuss pros and cons of competing algorithms. ====
+
+===== 4. Bully Election =====
+
+
+==== (a) Derive the message complexity ====
+
+==== Bully: ====
+- n²
+
+
+==== (b) Implement the algorithm (preferably in Python) and verify it works ====
+
+==== (c) Use the implementation to demonstrate the message complexity in practice ====
+
+
+===== 5. Hirschberg-Sinclair =====
+
+
+==== (a) Derive the message complexity ====
+log n
+
+
+==== (b) Implement the algorithm (preferably in Python) and verify it works ====
+
+==== (c) Use the implementation to demonstrate the message complexity in practice ====
+
+
+
+
+
