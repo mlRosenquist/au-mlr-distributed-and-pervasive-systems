@@ -1,0 +1,86 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2022-02-28T13:31:47+01:00
+
+====== S05 - FaultTolerance ======
+
+
+===== Consensus and fault tolerance =====
+
+==== 1. Discuss the need for fault tolerant systems and how fault tolerance is achieved in distributed systems ====
+If one node is failing. The system is still supposed to be operative. 
+{{./pasted_image.png}}
+
+==== 2. Discuss the fault consequences related to: i) availability, ii) reliability, iii) safety, iv) maintainability ====
+Availability: 
+- When there is a fault in the system. The probability that the system is operating correctly will be reduced. 
+
+Reliability: 
+- The property is directly affected during a fault. The system will not run continously without failure. 
+
+Safety: 
+- It should fail gracefully. A fault might accept the overall safety of the system. Fail-safe system.  
+
+Maintainability:
+- It should be easy to recover for a node when a fault occurs. Self repair. Recover time. 
+
+
+==== 3. Discuss the failure types: i) crash failure, ii) omission failure, iii) timing failure, iv) response failure and v) arbitrary failure ====
+Crash failure: 
+- Working correctly until it halts. 
+Omission Failure:
+- Fails to respond to incoming requests. 
+Timing Failure:
+- response is outside 
+Response Failure: 
+{{./pasted_image001.png}}
+
+==== 4. What is “consensus” in relation to distributed systems and why is it desirable to be able to guarantee consensus? ====
+{{./pasted_image002.png}}
+{{./pasted_image003.png}}
+Agree on some things or state. It's important so the nodes don't say different things. 
+
+
+==== 5. What fundamental property is typically needed in order to reach consensus (e.g. in terms of quorum)? ====
+- System reliability 
+
+
+===== Raft (https://www.geeksforgeeks.org/raft-consensus-algorithm/) =====
+
+==== 1. What is a “term” in RAFT and what are “terms” used for? ====
+{{./pasted_image018.png}}
+- If a candidate wins the election. It remains the leader for the rest of the term. If the vote is split, then therm ends without a leader. 
+- There is a term number. It increases monotonically. Each node stores the current term number, which is exchanged in every communication. 
+- A term is to determine a "time period"
+
+==== 2. How is leader election done in RAFT? ====
+- Leader periodically sends a heartbeat to folowwers. 
+- Is triggered when a folower times out after waiting for a heartbeat from leader. 
+- Follower transitions to candidate state and increment term number. 
+- It votes for itself and issues a requestvotes RPC. 
+	- Receies votes from the majority of the nodes -> it is leader -> sends heartbeat
+	- If other candidates receive appendEntries RPC they validate term number. If
+{{./pasted_image004.png}}
+==== 3. What does RAFT do, if there is a split vote in a term? ====
+{{./pasted_image005.png}}
+==== 4. How is log replication done in RAFT? ====
+
+==== 5. How does RAFT guarantee logs to be replicated correctly? ====
+
+==== 6. How does RAFT resolve log inconsistencies and what role does the “log matching property” play? ====
+{{./pasted_image006.png}}
+{{./pasted_image007.png}}
+{{./pasted_image008.png}}
+{{./pasted_image009.png}}
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+==== 7. What criterion needs to be fulfilled for a node to become leader in RAFT? ====
+It needs to receive votes from the majority of the services. Then sends heartbeat to establish autority. 
+
+==== 8. How does RAFT reach consensus in a distributed system (what criterion needs to be fulfilled)? ====
+{{./pasted_image012.png}}
+==== 9. How can RAFT help provide fault tolerance in distributed systems? ====
+{{./pasted_image013.png}}
+==== 10. What does the RAFT acronym stand for and who developed RAFT? ====
+{{./pasted_image015.png}}
+{{./pasted_image016.png}}
