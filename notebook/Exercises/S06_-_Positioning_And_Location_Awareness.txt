@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2022-03-07T12:40:14+01:00
+
+====== S06 - Positioning And Location Awareness ======
+
+
+===== 1. Exercise: Location based services =====
+
+==== What is a location based service? ====
+
+==== Why is geographical position data relevant for location based services? ====
+
+==== Discuss some of the common location based services you know ====
+
+=== Discuss some of the common location based services you know ===
+
+=== What level of position accuracy is required for those services to work (will that include/exclude some sensor or network technologies)? ===
+
+=== Does those services collect and use location data for anything other than rendering the particular service (e.g. for adds or other third-party purposes)? ===
+
+==== Does those services collect and use location data for anything other than rendering the particular service (e.g. for adds or other third-party purposes)? ====
+
+===== 2. Exercise: RSSI as a distance metric =====
+
+==== Understand what RSSI and dBm means ====
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+{{./pasted_image002.png}}
+
+===== 3. Exercise: Absolute positioning by tri-angulation/lateration =====
+{{./pasted_image003.png}}
+{{./pasted_image004.png}}
+===== 4. Exercise: Relative positioning by dead reckoning =====
+{{./pasted_image005.png}}
+{{./pasted_image006.png}}
+{{./pasted_image007.png}}
+===== 5. Exercise: Hybrid positioning by the Kalman estimator =====
+{{./pasted_image009.png}}
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+{{./pasted_image012.png}}
