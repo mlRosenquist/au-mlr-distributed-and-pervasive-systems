@@ -8,25 +8,29 @@ Creation-Date: 2022-03-07T12:40:14+01:00
 ===== 1. Exercise: Location based services =====
 
 ==== What is a location based service? ====
-
+{{./pasted_image013.png}}
+{{./pasted_image014.png}}
 ==== Why is geographical position data relevant for location based services? ====
+Because they use the users location in some way. 
 
 ==== Discuss some of the common location based services you know ====
+Google maps. Pokemon go. 
 
 === Discuss some of the common location based services you know ===
+{{./pasted_image015.png}}
 
 === What level of position accuracy is required for those services to work (will that include/exclude some sensor or network technologies)? ===
+Prety decent accuracly. 
+
 
 === Does those services collect and use location data for anything other than rendering the particular service (e.g. for adds or other third-party purposes)? ===
-
-==== Does those services collect and use location data for anything other than rendering the particular service (e.g. for adds or other third-party purposes)? ====
+Pretty much everything
 
 ===== 2. Exercise: RSSI as a distance metric =====
 
 ==== Understand what RSSI and dBm means ====
-{{./pasted_image.png}}
-{{./pasted_image001.png}}
-{{./pasted_image002.png}}
+{{./pasted_image016.png}}
+{{./pasted_image017.png}}
 
 ===== 3. Exercise: Absolute positioning by tri-angulation/lateration =====
 {{./pasted_image003.png}}
