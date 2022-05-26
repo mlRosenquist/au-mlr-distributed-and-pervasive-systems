@@ -119,3 +119,18 @@ Ahmdahl
 	* pessimstic -> changed by improved ressources
 
 ===== Slides =====
+
+{{./pasted_image007.png}}
+{{./pasted_image008.png}}
+{{./pasted_image009.png}}
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+{{./pasted_image012.png}}
+{{./pasted_image013.png}}
+{{./pasted_image014.png}}
+{{./pasted_image015.png}}
+{{./pasted_image016.png}}
+{{./pasted_image017.png}}
+{{./pasted_image018.png}}
+{{./pasted_image019.png}}
+{{./pasted_image020.png}}
