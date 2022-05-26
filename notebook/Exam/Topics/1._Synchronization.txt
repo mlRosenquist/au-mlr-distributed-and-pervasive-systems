@@ -10,3 +10,38 @@ Creation-Date: 2022-05-26T08:53:44+02:00
 * Hans Weibel. Technology Update on IEEE 1588: The second Edition of the High Precision Clock Synchronization Protocol. Tech. rep. Winterthur, Switzerland: Zurich University of Applied Sciences, 2009. pp. 1–8
 
 ===== Slides =====
+
+===== Clock Synchronization =====
+
+==== Objectives ====
+{{./pasted_image004.png}}
+==== Challenges ====
+{{./pasted_image005.png}}
+==== Logical Clocks ====
+{{./pasted_image007.png}}
+{{./pasted_image009.png}}
+=== Time stamps ===
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+=== Vector Clock ===
+{{./pasted_image014.png}}
+{{./pasted_image015.png}}
+{{./pasted_image016.png}}
+==== Real Clocks ====
+{{./pasted_image006.png}}
+=== Precision Time Protocol ===
+{{./pasted_image017.png}}
+{{./pasted_image018.png}}
+{{./pasted_image019.png}}
+== Offset Correction ==
+{{./pasted_image023.png}}
+== Delay Correction ==
+{{./pasted_image024.png}}
+== Layer to do the protocol ==
+{{./pasted_image020.png}}
+{{./pasted_image021.png}}
+{{./pasted_image022.png}}
+
+== Topology ==
+{{./pasted_image025.png}}
+{{./pasted_image026.png}}
