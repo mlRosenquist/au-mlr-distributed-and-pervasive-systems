@@ -3,5 +3,18 @@ Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:53:56+02:00
 
 ====== 2. Leader election and consistency ======
-Created Thursday 26 May 2022
+
+===== Litterature 30 =====
+leader election 10
+* Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 329–336
+* D.S. Hirschberg and J.B. Sinclair. “Decentralized Extrema-Finding in Circular Configurations of Processors”. In: Communications of the ACM 23.11 (1980).
+
+consistency
+* Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 355–358 + pp. 420–421
+* Mikito Takada. Distributed Systems for Fun & Profit. Published online, 2013. url: http://book.mixu.net/distsys. pp. regarding the “CAP theorem
+* Werner Vogels. “Eventually Consistent”. In: Communications of the ACM 52.1 (2009).
+* Daniel J. Abadi. “Consistency Tradeoffs in Modern Distributed Database System Design”. In: IEEE Computer Society (2012).
+
+
+===== Slides =====
 

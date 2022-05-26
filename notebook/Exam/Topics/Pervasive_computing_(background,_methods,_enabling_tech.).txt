@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
-Creation-Date: 2022-05-26T08:54:26+02:00
-
-====== Pervasive computing (background, methods, enabling tech.) ======
-Created Thursday 26 May 2022
-

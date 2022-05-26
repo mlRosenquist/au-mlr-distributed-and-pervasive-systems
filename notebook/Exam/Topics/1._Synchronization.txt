@@ -3,5 +3,10 @@ Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:53:44+02:00
 
 ====== 1. Synchronization ======
-Created Thursday 26 May 2022
 
+===== Litterature 30p =====
+* Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 297–321.
+* Leslie Lamport. “Time, Clocks, and the Ordering of Events in a Distributed System”. In: Communications of the ACM 21.7 (1978). pp. 558–560.
+* Hans Weibel. Technology Update on IEEE 1588: The second Edition of the High Precision Clock Synchronization Protocol. Tech. rep. Winterthur, Switzerland: Zurich University of Applied Sciences, 2009. pp. 1–8
+
+===== Slides =====

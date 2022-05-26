@@ -2,6 +2,17 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:54:45+02:00
 
-====== 6. Context awareness using smart devices, smart environments and smart interaction (towards intelligent environments) ======
-Created Thursday 26 May 2022
+====== 6. Context awareness using smart devices, smart environments and smart interaction (towards intelligent environments S 9 + 10) ======
+
+===== Litterature =====
+* POSLAD2009 chapter 2 & 7 + 8
+* (POSLAD2009): Ubiquitous computing : smart device, environment, and interactions / Stefan Poslad. ISBN 978 0 470 03560 3
+* POSLAD2009 chapter 8
+* AMADOR-DOMINDUEZ2019 paper online
+* RIBONI2020 paper online
+* (POSLAD2009): Ubiquitous computing : smart device, environment, and interactions / Stefan Poslad. ISBN 978 0 470 03560 3
+* (AMADOR-DOMINDUEZ2019): Prediction and Decision-Making in Intelligent Environments Supported by Knowledge Graphs, A Systematic Review. / Elvira Amador-Domínguez  , Emilio Serrano, Daniel Manrique, and Juan F. De Paz
+* (RIBONI2020) Unsupervised Recognition of Multi-Resident Activities in Smart-Homes DANIELE RIBONI , (Member, IEEE), AND FLAVIA MURRI
+
+===== Slides =====
 

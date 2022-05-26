@@ -2,6 +2,120 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T09:17:09+02:00
 
-====== Overview ======
-Created Thursday 26 May 2022
+====== Overview S 1 ======
 
+===== Litterature 70 =====
+
+==== Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 1–53. ====
+* A distributed system is a collection of autonomous computing elements that appears to its users as a single coherent system.
+{{./pasted_image.png}}
+* 1. Collection of autonomous computing elements
+	* Nodes
+	* Global Clock
+	* Group membership
+	* Open / Closed group
+	* Overlay network - structed / unstructed (random) - connected
+* 2. Single coherent system
+	* distribution transparency
+	* middleware across nodes
+		* communication (RPC)
+		* transaction
+		* service compositition
+		* reliability
+
+* Design Goals
+	* Supporting ressource sharing (data)
+		* [[BitTorrent]]
+	* Transparency
+		* location transparency - object phys located - URL
+		* relocation - 
+		* migration transparency - supports mobility, phone call
+		* replication - several copies
+		* concurrency - utilize same file two users
+		* failure - does not notice one node fails. fails gracefully
+		* transparency is trade off 
+	* Openess
+		* Interoperability, composability and extensibility (interface definition language)
+		* separate policy from mechanism - caching 
+		* scalable - size, geo, admin, size
+			* replication and caching -> consistency problems
+	* Pitfalls
+		* network - reliable, secure, homogen
+		* topology no change
+		* latency is zero
+		* bandwith is infinite
+		* transport cost is zero
+		* one admin
+* Types
+	* high performance
+		* parallelism
+		* cluster computing - local
+			* look as one pc
+			* no homgenity
+		* grid computing - no local
+			* no homogenity
+		* cloud computing - outsource 
+			* accesible pool of virtual resources
+			* hardware, infrastruc, platform, application
+			* IaaS, PaaS, [[SaaS]]
+	* Distributed information systems
+		* interopreability is a pain
+		* database transactions 
+		* enterprise application integration
+			* RPC
+		* decouple app from database
+	* Pervasive Systems
+		* unsable
+		* blurred separation between users and systems
+		* sensors/actuators
+		* wireless/mobile
+		* Ubiquitous computing systems
+			* continously
+			* implicit interaction
+			* context awareness - certain input use context (location, idenity, time and activity
+			* autonomous - no admin
+		* Mobile computing systems
+			* wireless
+			* location change
+			* service discovery
+			* disruption-tolerant networks
+			* flooding, store untill can pass
+		* Sensor Networks
+			* Collaberate
+			* Many
+			* Wireless, liimited resourced
+			* in-network-data processing / centralized
+
+==== John L. Gustafson. “Amdahl’s Law”. In: Encyclopedia of Parallel Computing. Ed. by David Padua. Boston, MA: Springer US, 2011, pp. 53–60. ISBN: 978-0-387-09766-4. DOI: 10.1007/978-0-387-09766-4_77. url: https://doi.org/10.1007/978-0-387-09766-4_77. ====
+{{./pasted_image001.png}}
+{{./pasted_image002.png}}
+{{./pasted_image003.png}}
+* assumes 1/f parrelises perfect 
+* Does not include communication or intermediate degrees of paralleism
+* dependent on processors
+* inaccurate
+* Overlooked the assupmtion that problem size is fixed and system cost is linear in number processors
+* All or none parrallelism - can be one to N
+* communication can be serial or parallel
+* nine women canøt have a baby in one month
+* became a justification to avoid parallel computing -> but then came gustafon
+* rule-of-thumb goal of performance improvement to reduce time for a fixed task where gustafson is to increase problem problem size for a fixed amount of time 
+* not contradicting or corolary. different assumption and situations
+
+==== John L. Gustafson. “Gustafson’s Law”. In: Encyclopedia of Parallel Computing. Ed. by David Padua. Boston, MA: Springer US, 2011, pp. 819–825. ISBN: 978-0-387-09766-4. DOI: 10.1007/978-0-387-09766-4_78. url: https://doi.org/10.1007/978-0-387-09766-4_78. ====
+{{./pasted_image004.png}}
+{{./pasted_image005.png}}
+{{./pasted_image006.png}}
+Gustafon: 
+	* Serial fraction does not limit parrallel speed enhancement if problem or worload scales in it parallel component
+	* fixes run time and answers how much longer time the present worload would take in the absence of parallelism
+	* serial fraction is not a constant but decreases with increased proble simze 
+	* 1000 fold parralel speedup created a sensation
+	* Amdahls law was correct to the wrong question. 
+	* Travel example, use jets for longer trips
+Ahmdahl
+	* amdahl which predict time reduction for a fixed problem size
+	* fixes the problem size - how prallel processing can reduce execution time 
+	* pessimstic -> changed by improved ressources
+
+===== Slides =====

@@ -2,6 +2,15 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:54:10+02:00
 
-====== 3. Fault tolerance and consensus ======
-Created Thursday 26 May 2022
+====== 3. Fault tolerance and consensus S 5 ======
+
+===== Litterature 26 =====
+* Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 423–432 + pp. 499–500
+* Diego Ongaro and John Ousterhout. “In Search of an Understandable Consensus Algorithm”. In: USENIX Annual Technical Conference. (Philadelphia, PA). 2014.
+	* Companion website for: D. Ongaro, J. Ousterhout, ”In Search of an Understandable Consensus Algorithm”, USENIX, Annual Technical Conference, Philadelphia, PA, 2014. url: https://raft.github.io.
+	* Presentation video for: D. Ongaro, J. Ousterhout, ”In Search of an Understandable Consensus Algorithm”, USENIX, Annual Technical Conference, Philadelphia, PA, 2014. url: https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro
+
+===== Slides =====
+
+
 

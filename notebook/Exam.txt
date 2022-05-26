@@ -3,5 +3,47 @@ Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:48:38+02:00
 
 ====== Exam ======
-Created Thursday 26 May 2022
+
+===== Requirements =====
+* Approved technical-scientific project reports
+* Approved functional proof-of-concept prototypes (must meet the given specifications)
+* Approved presentation(s) including active participation in associated Q/A sessions
+
+===== Curriculum =====
+* The curriculum cover all course readings except where otherwise stated.
+
+===== Practicalities =====
+* The study administration makes the exam sequence. If you want to switch with another student, you do the planning yourself and let me (CFP) know by mail
+* If you decide to not show for the exam, please let me know by mail (I do not need to know the reason) as it helps me run the exams without delays and idle periods
+* To estimate your exam time-slot roughly: 25 minutes per student + breaks
+* Please be ready at least 30 min. before your turn
+* The exam is individual and oral
+* The duration of the exam is 20 minutes per student including voting
+* There is no preparation time
+* TBD: At each examiniation slot - two students are randomized to either be examined by Stefan or Christian 
+* The grading is only based on the performance during the assigned 20 minutes per student
+* The project reports do not play a part in the grading. However, since you are allowed to discuss elements of your reports, they are all sent to the external examiner prior to the exam so he/she has a chance to be prepared and familiarized with the contents thereof
+* Remember to bring your reports and have any prototypes you wish to show ready to run
+* You are allowed to bring slides for your presentation
+* At the exam, you randomly select an exam topic (TBD: based on which lecturer you are assigned to)
+* During the exam, the external examiner and we will ask questions and facilitate discussions, but it is important that you as a student take initiative to also lead the talk
+
+===== Agenda =====
+* 10 minutes: Randomly selected topic
+* In-depth presentation and discussion of the selected topic
+* Primary focus: theory/theories and method/methods
+* Secondary focus: practical exemplification of key elements via code-snippets
+* 07 minutes: Discussion exploring other parts of the curriculum
+* 03 minutes: Voting and feedback
+
+===== Andreas Notes =====
+* You can and should bring pre-prepared material (slides)  -> not too much text, as that may lead to reading out loud instead of explaining from memory/knowledge.
+* Emphasis on the "not too much text" part (external censors could consider that cheating)
+* Danish/English/Danglish - any is fine. (But use the actual terms, not translations fx. It is "calm" not "rolig" technology)
+* There is a lot of freedom on what you prepare -> You can bring slides combined with drawings, you can use whiteboard and explanations and no slides.. 
+	* Use pictures and headings for slides - Not a lot of text.
+	* Or simple bullet-points
+* All-in-all classic oral examination
+* Cristian may show slides from the course when asking a question, not because you have to remember all slides, but because he finds it to be a fast way to ask a question and have the student fast and easily know exactly what is meant with the question
+* For each topic you probably want to consider how it relates to the projects. You don't need to mention it in the exam but you can if you want to. And if you are asked about it, it is handy to have considered it beforehand.
 

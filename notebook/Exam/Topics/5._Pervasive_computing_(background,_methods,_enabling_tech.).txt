@@ -2,6 +2,15 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:54:26+02:00
 
-====== Pervasive computing (background, methods, enabling tech.) ======
-Created Thursday 26 May 2022
+====== 5. Pervasive computing (background, methods, enabling tech. S 8) ======
+
+===== Litterature =====
+* POSLAD2009 chapter 1
+* WEISER1991 full paper
+* ABOWD2016 full paper
+* (POSLAD2009): Ubiquitous computing : smart device, environment, and interactions / Stefan Poslad. ISBN 978 0 470 03560 3
+* (WEISER1991): Weiser, M. (1991). The Computer for the 21 st Century. Scientific american, 265(3), 94-105.
+* (ABOWD2016): Abowd, G. D. (2016). Beyond Weiser: From ubiquitous to collective computing. Computer, 49(1), 17-23.
+
+===== Slides =====
 

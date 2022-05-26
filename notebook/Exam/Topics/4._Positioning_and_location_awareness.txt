@@ -2,6 +2,16 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:54:18+02:00
 
-====== 4. Positioning and location awareness ======
-Created Thursday 26 May 2022
+====== 4. Positioning and location awareness (S 6) ======
+
+===== Litterature 30 =====
+* Yves-Alexandre de Montjoye et al. “Unique in the Crowd: The privacy bounds of human mobility”. In: Nature, Scientific Reports (2013).
+* Vincent Pierlot and Marc Van Droogenbroeck. “A New Three Object Triangulation Algorithm for Mobile Robot Positioning”. In: IEEE, Transactions on Robotics 30.3 (2014).
+* Carl Fischer and Hans Gellersen. “Location and Navigation Support for Emergency Responders: A Survey”. In: IEEE, Pervasive Computing (2010).
+* Ramsey Faragher. “Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation”. In: IEEE, Signal Processing Magazine (2012). 
+
+===== Slides =====
+
+
+
 
