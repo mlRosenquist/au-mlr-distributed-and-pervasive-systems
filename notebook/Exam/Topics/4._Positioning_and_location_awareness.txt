@@ -5,12 +5,80 @@ Creation-Date: 2022-05-26T08:54:18+02:00
 ====== 4. Positioning and location awareness (S 6) ======
 
 ===== Litterature 30 =====
-* Yves-Alexandre de Montjoye et al. “Unique in the Crowd: The privacy bounds of human mobility”. In: Nature, Scientific Reports (2013).
-* Vincent Pierlot and Marc Van Droogenbroeck. “A New Three Object Triangulation Algorithm for Mobile Robot Positioning”. In: IEEE, Transactions on Robotics 30.3 (2014).
-* Carl Fischer and Hans Gellersen. “Location and Navigation Support for Emergency Responders: A Survey”. In: IEEE, Pervasive Computing (2010).
-* Ramsey Faragher. “Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation”. In: IEEE, Signal Processing Magazine (2012). 
+
+==== Yves-Alexandre de Montjoye et al. “Unique in the Crowd: The privacy bounds of human mobility”. In: Nature, Scientific Reports (2013). ====
+
+
+==== Vincent Pierlot and Marc Van Droogenbroeck. “A New Three Object Triangulation Algorithm for Mobile Robot Positioning”. In: IEEE, Transactions on Robotics 30.3 (2014). ====
+
+
+==== Carl Fischer and Hans Gellersen. “Location and Navigation Support for Emergency Responders: A Survey”. In: IEEE, Pervasive Computing (2010). ====
+
+
+==== Ramsey Faragher. “Understanding the Basis of the Kalman Filter Via a Simple and Intuitive Derivation”. In: IEEE, Signal Processing Magazine (2012). ====
 
 ===== Slides =====
+
+==== Location Based Services ====
+
+=== Concept ===
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+{{./pasted_image002.png}}
+{{./pasted_image003.png}}
+{{./pasted_image009.png}}
+
+=== Definitions ===
+{{./pasted_image004.png}}
+{{./pasted_image005.png}}
+{{./pasted_image006.png}}
+=== Methods ===
+
+== Cell towers ==
+{{./pasted_image007.png}}
+
+==== Absolute Positioning ====
+{{./pasted_image010.png}}
+=== Triangulation (ToTal algorithm) ===
+{{./pasted_image011.png}}
+{{./pasted_image012.png}}
+{{./pasted_image013.png}}
+{{./pasted_image014.png}}
+{{./pasted_image015.png}}
+=== Trilateration (RSSI as distance) ===
+{{./pasted_image016.png}}
+{{./pasted_image017.png}}
+{{./pasted_image018.png}}
+{{./pasted_image019.png}}
+{{./pasted_image020.png}}
+{{./pasted_image021.png}}
+{{./pasted_image022.png}}
+==== Relative Positioning ====
+{{./pasted_image023.png}}
+{{./pasted_image024.png}}
+{{./pasted_image025.png}}
+==== Hybrid Positioning ====
+
+== Sensor fusion ==
+
+{{./pasted_image026.png}}
+{{./pasted_image027.png}}
+{{./pasted_image028.png}}
+== Kalman Filter ==
+{{./pasted_image029.png}}
+{{./pasted_image030.png}}
+{{./pasted_image031.png}}
+
+
+{{./pasted_image034.png}}
+{{./pasted_image035.png}}
+{{./pasted_image036.png}}
+{{./pasted_image037.png}}
+{{./pasted_image038.png}}
+
+== Kalman 1d example ==
+{{./pasted_image039.png}}
+{{./pasted_image040.png}}
 
 
 

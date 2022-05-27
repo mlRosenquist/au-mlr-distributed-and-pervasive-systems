@@ -5,12 +5,105 @@ Creation-Date: 2022-05-26T08:54:10+02:00
 ====== 3. Fault tolerance and consensus S 5 ======
 
 ===== Litterature 26 =====
-* Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 423–432 + pp. 499–500
-* Diego Ongaro and John Ousterhout. “In Search of an Understandable Consensus Algorithm”. In: USENIX Annual Technical Conference. (Philadelphia, PA). 2014.
-	* Companion website for: D. Ongaro, J. Ousterhout, ”In Search of an Understandable Consensus Algorithm”, USENIX, Annual Technical Conference, Philadelphia, PA, 2014. url: https://raft.github.io.
-	* Presentation video for: D. Ongaro, J. Ousterhout, ”In Search of an Understandable Consensus Algorithm”, USENIX, Annual Technical Conference, Philadelphia, PA, 2014. url: https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro
+
+==== Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 423–432 + pp. 499–500 ====
+
+
+==== Diego Ongaro and John Ousterhout. “In Search of an Understandable Consensus Algorithm”. In: USENIX Annual Technical Conference. (Philadelphia, PA). 2014. ====
+* Raft alternative to (multi-)Paxos
+
+=== Consensus ===
+* coherent group that can surve failures 
+* arise in context of replicated state machines - fault tolerance
+
+=== Paxos ===
+* domiantes over last decode
+* complex structure: hard to learn and build
+
+=== Raft ===
+* Separates key elements of consensus: leader election, log replication and safetify
+* understandability: learn and build
+	* Strong Leader
+		* long entries only from the leader
+		* manages the replicated log - accept log entries from clients and replicates them. T
+	* Leader elections
+		* randomized timers to detect leaders - hearbeat
+	* Membership changes
+		* two different configurations overlap during transitions
+* Basics
+	* Several servers
+	* server is in state: leader, followere or candiate
+	* if followere receive message -> redirect
+	* time into terms
+		* term beings with election
+		* canditates attemt to become leader
+		* current term is exchanged -> if one is above it updates
+		* Terms can be stale, if receive request in that term. Rejects
+		* RPCS
+	* Leader election
+		* heartbeat to trigger
+		* leader sends heartbeat to stay as leader
+		* No heartbear -> start new election
+		* Start an election -> increment term and go canditate state -> vote itself and issue requestVote. 
+		* candiate can: win, anotehr server wins, time with no winner
+		* Candidate wins by receiving votes fro majority
+	* Log replication 
+		* leader elected -> servicing client request -> a command to be executed by the replicated state machnies
+		* append command to log and on other servers
+		* safety: conflicting entries in followers logs will be overwritted with entries from leaders log
+		* consistent log. Leader find point where followers log is alligned, delete all after that, and add from leaders
+	* Safety:
+		* execute same command in same order
+			* unavailable
+			* then become leader -> overwrite log 
+		* Ensured that you can only be leader if you have all entries committed from the previous term
+		* [[RequestVote]] RPC contains information about candidates log
+		* only log entries from the leaders current term are comitted
+		* follower and candidate crashes, their requestvote is neglected because of old term
+	* Cluster membership changes
+		* two-phase approach
+		* once joint consensus has been comitted the system transition to new config
+		* join consensus combiens both old and new
+	* Understandability -> RAFT WINS
+	* Performance
+		* Similar
+	* Differences
+		* STRONG leadership a lot of task on the leader
+		* Fewer message types
+
+=== Replicated State Machine ===
+* consensus arise in the context of
+* repicated log - series of commands - which is executed
+* consensus algorithm controles log
 
 ===== Slides =====
 
+==== Terminology ====
 
+{{./pasted_image002.png}}
+==== Motivation ====
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+=== Consensus Problem ===
+{{./pasted_image003.png}}
+{{./pasted_image004.png}}
+=== History ===
+{{./pasted_image005.png}}
+
+==== Raft ====
+
+=== Overview ===
+{{./pasted_image006.png}}
+{{./pasted_image007.png}}
+{{./pasted_image008.png}}
+=== Leader Election ===
+{{./pasted_image009.png}}
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+=== Log Replication ===
+{{./pasted_image012.png}}
+{{./pasted_image013.png}}
+{{./pasted_image014.png}}
+=== Safety ===
+{{./pasted_image015.png}}
 
