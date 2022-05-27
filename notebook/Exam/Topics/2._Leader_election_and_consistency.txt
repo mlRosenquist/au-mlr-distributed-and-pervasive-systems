@@ -5,16 +5,156 @@ Creation-Date: 2022-05-26T08:53:56+02:00
 ====== 2. Leader election and consistency ======
 
 ===== Litterature 30 =====
-leader election 10
-* Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 329–336
-* D.S. Hirschberg and J.B. Sinclair. “Decentralized Extrema-Finding in Circular Configurations of Processors”. In: Communications of the ACM 23.11 (1980).
 
-consistency
-* Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 355–358 + pp. 420–421
-* Mikito Takada. Distributed Systems for Fun & Profit. Published online, 2013. url: http://book.mixu.net/distsys. pp. regarding the “CAP theorem
-* Werner Vogels. “Eventually Consistent”. In: Communications of the ACM 52.1 (2009).
-* Daniel J. Abadi. “Consistency Tradeoffs in Modern Distributed Database System Design”. In: IEEE Computer Society (2012).
+==== leader election 10 ====
 
+=== Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 329–336 ===
+* Unique id -> Select highest id to leader
+* Dont know node availability
+* Agreement
+
+== Bully Algorithm ==
+* Election message to all higher -> Return OK -> Job done
+* The higher nodes do election to all higher -> if it is highest -> send coordinator message to all nodes
+
+== Ring Algorithm ==
+* Know its succesors
+* Any notice coordinator down -> build election message (contains own id) -> send to succesor, if succesor is down it jumps over -> succesor notes its own id in message
+* After full ring a node can see its own id -> message type changed to coordinator and circulated. 
+
+== Elections in wireless ==
+* unrealistic assumption with typical algorithms, realiability, availability and topoligy.
+* Node sends election to all immediate nodes -> node sets sender to parent -> sends election to all immediatie nodes except parent
+
+== Elections in large-scale systems ==
+* Many algorithms on work on small distributed
+* They only concentrate on a single leader
+* Can be situation with multiple leaders (super peers)
+
+=== D.S. Hirschberg and J.B. Sinclair. “Decentralized Extrema-Finding in Circular Configurations of Processors”. In: Communications of the ACM 23.11 (1980). ===
+* unidirectional ring of nodes
+* Lelann O(n²)
+* Cahng And Roberts improved O(n log n) -> worst case O(n²)
+* This algorithm allways O(n log n)
+
+==== consistency ====
+
+=== Marten van Steen and Andrew S. Tanenbaum. Distributed Systems. 3rd ed. (ver. 3.02). Distributed-systems.net, 2018. pp. 355–358 + pp. 420–421 ===
+* Reliability and Performance boost at the cost of global synchronization
+* Replication
+	* Improve performance and reliability
+		* Protection against corruped
+		* Performance with regards to scaling and geographical area
+		* Scaling in terms of many nodes need to acces the data
+	* Issues: replicas lead to consistency issues
+	* Scaling technique
+		* Replication ad cahcing for performance are widely applied as scaling
+		* Placing copies close to user leads to better performance
+		* Keeping copies up to date require more network bandwidth
+		* Keeping mutiple copies consistent is subject to scalability problems 
+		* Propagate updates of copies
+	* Update all replications as a single atomic operation
+		* Leads to consensus problem
+		* May need global ordering of operation such as lamport timestams
+		* Synch takes time
+
+* Consistency
+	* How are replicas stored and where
+	* How are replicas kept consistent
+
+=== Mikito Takada. Distributed Systems for Fun & Profit. Published online, 2013. url: http://book.mixu.net/distsys. pp. regarding the “CAP theorem ===
+* Very good overview of EVERYTHING
+
+=== Werner Vogels. “Eventually Consistent”. In: Communications of the ACM 52.1 (2009). ===
+* High availability vs consistency
+* Eventually consistent
+* distibution transpaSrency
+* Availability most important, but with should the tradeoff be
+* CAP theorem - consistency, availability, partition
+	* write operation
+	* if we take consistency - we may not be availabe to take a write
+	* if we take availability - we will take the write, but system might not reflect that
+* Example: storage system, P A write to storage, B and C, independet of A writes to stoage. 
+	* Strong consistency:
+		* A makes update
+		* Any subsequent acces returns updated value
+	* Weak Consistency
+		* A Makes update
+		* Any subsequent access does not guarentee updated value
+	* Eventual Consistency
+		* Form of weak consistency
+		* guarentee that if no new updated, eventually all acceses will return the updated vlaue.
+		* DNS
+	* Casual consistency
+		* A writes to be that it has updated
+		* B access updated value
+	* Read-writes-consistency
+		* A make updated -> A can see updated 
+	* Can combine these consitencies
+	* Inconsistency window is when system is not consistent: dependent on network and amount replicas
+
+=== Daniel J. Abadi. “Consistency Tradeoffs in Modern Distributed Database System Design”. In: IEEE Computer Society (2012). ===
+* PACELC - if there is a partition (P), how does the system trade off availability (A) and consistency (C), when the system is running normally in the absence of partitions how does the system trade of latency (L) and consistency (C).
+	* Dynama/cassandra - PA/EL system
+* CAP is not complete - in the absence of partitioning and tradeoff between latency and consistency occurs
+* CAP no system restrictions
+* Consistency vs latency
+* Replication leads to tradeoff of consistency and latency
+	* updates to all replicas at same time
+	* update sent to an aggreed upon location first
+		* send to master node
+		* synch or async/
+	* update sent to an arbitray ocation first
 
 ===== Slides =====
+
+==== Leader Election ====
+
+=== Motivation ===
+{{./pasted_image.png}}
+{{./pasted_image001.png}}
+=== Algorithms ===
+
+== Bully ==
+{{./pasted_image003.png}}
+{{./pasted_image004.png}}
+{{./pasted_image002.png}}
+== Lelan Chang Roberts ==
+{{./pasted_image005.png}}
+{{./pasted_image006.png}}
+== Mobile Ad Hoc Networks ==
+{{./pasted_image007.png}}
+{{./pasted_image009.png}}
+
+== HS ==
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+{{./pasted_image012.png}}
+==== Consistency ====
+
+=== Replication ===
+
+== Motivation ==
+{{./pasted_image013.png}}
+== Challenges ==
+{{./pasted_image014.png}}
+== CAP ==
+{{./pasted_image017.png}}
+{{./pasted_image015.png}}
+{{./pasted_image016.png}}
+{{./pasted_image018.png}}
+{{./pasted_image019.png}}
+
+{{./pasted_image020.png}}
+=== Models ===
+
+== Strong Consitency ==
+{{./pasted_image021.png}}
+== Weak Consitency ==
+{{./pasted_image022.png}}
+== Eventual Consitency ==
+{{./pasted_image023.png}}
+{{./pasted_image024.png}}
+{{./pasted_image025.png}}
+
 

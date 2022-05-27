@@ -25,7 +25,7 @@ Creation-Date: 2022-05-26T09:17:09+02:00
 
 * Design Goals
 	* Supporting ressource sharing (data)
-		* [[BitTorrent]]
+		* BitTorrent
 	* Transparency
 		* location transparency - object phys located - URL
 		* relocation - 
@@ -57,7 +57,7 @@ Creation-Date: 2022-05-26T09:17:09+02:00
 		* cloud computing - outsource 
 			* accesible pool of virtual resources
 			* hardware, infrastruc, platform, application
-			* IaaS, PaaS, [[SaaS]]
+			* IaaS, PaaS, SaaS
 	* Distributed information systems
 		* interopreability is a pain
 		* database transactions 
