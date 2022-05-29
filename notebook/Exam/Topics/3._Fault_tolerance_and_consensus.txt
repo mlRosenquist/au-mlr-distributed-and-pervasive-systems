@@ -57,7 +57,7 @@ Creation-Date: 2022-05-26T08:54:10+02:00
 			* unavailable
 			* then become leader -> overwrite log 
 		* Ensured that you can only be leader if you have all entries committed from the previous term
-		* [[RequestVote]] RPC contains information about candidates log
+		* RequestVote RPC contains information about candidates log
 		* only log entries from the leaders current term are comitted
 		* follower and candidate crashes, their requestvote is neglected because of old term
 	* Cluster membership changes

@@ -2,15 +2,127 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:54:26+02:00
 
-====== 5. Pervasive computing (background, methods, enabling tech. S 8) ======
+====== 5. Pervasive computing (background, methods, enabli ======
+
+====== ng tech. S 8) ======
 
 ===== Litterature =====
-* POSLAD2009 chapter 1
-* WEISER1991 full paper
-* ABOWD2016 full paper
-* (POSLAD2009): Ubiquitous computing : smart device, environment, and interactions / Stefan Poslad. ISBN 978 0 470 03560 3
-* (WEISER1991): Weiser, M. (1991). The Computer for the 21 st Century. Scientific american, 265(3), 94-105.
-* (ABOWD2016): Abowd, G. D. (2016). Beyond Weiser: From ubiquitous to collective computing. Computer, 49(1), 17-23.
+
+==== POSLAD2009 chapter 1 ====
+* Smart Device
+* Smart Environment
+* Smart Interaction
+* Ubiquity - its everywhere
+* Transparent - we dont notice it is there. in interaction
+* Openess - add remove systems. Complexicity and availability
+* ICT - Information Communication Technology
+* HCI - Human Computer Interaction
+	* Implicit - Calm - 
+	* Explicit - user do every action
+* VR - create new world
+* AR - modify existing world
+* Context Awareness
+	* Physical - locationg, time
+	* Human: preferences, social mood
+	* ICT - available services
+	* Active vs Passive
+	* User awareness
+* Autonomy
+	* Decide own actions
+	* USer configures task or goals
+	* Reduce human interaction
+	* Mainentance, manual vs self-maintaining
+* Intelligence
+* Taxanomy of ubicom props
+	* ubiquity and transparent
+	* low power, bandiwth, embedded devices
+	* dist mobile systems, intelligent systems
+	* ubiquity is context driven
+	* Properties of differetn systems, distributed, iHCI, context aware, autonomous, intelligent
+* Ubiqutuitous systs env inter
+	* infrastructe of other ICT, human environment, physical environment
+* H2H, C2C, CCI, H2C, C2H, P2P 
+* Architectural Design
+	* Smart means: active, digital, networked, autonomously
+	* Overlap
+	* Smart Device
+		* Smart Phone, PC
+		* phone is also a camera, music player is also a printer
+		* Owner
+		* props: mobiity, dynamic service discovery, intermittent ressource acces
+		* tabs, pads and boards
+		* Wireless Networks
+		* Service Discovery
+		* Situated and self aware
+		* May use some awareness of the physical environment
+	* Smart Environment
+		* React to events, and do something
+		* Walls can sense camera is recording and modify lightning
+		* Set of networked devices - connected to physical world
+		* Single predifined task
+		* Support a bounded local context of user interaction
+		* focus on distributing multiple devices in the physical environments whiich are context ware of their human users and their phyiscal locality
+	* Smart Interactions
+		* For SD and SI to support core props of UbiCom we need smart interaction
+		* Devices interoperate
+		* Camera can interonnect to phone to share recording direct to printer to print
+		* Basic Interaction - Sender know receiver in advance, message is aggreed, control flow is known
+		* interaction that are coordinated, conventions based, semantics and lingustic based, driven by dynamic organisations
+		* Sensor to turn on lights. Only turn on specific lights. Using context of location and what the person is doing. 
+		* Operate more autonomously using minimal human operation management.
+
+==== WEISER1991 full paper ====
+* Ahead of his time - 1991
+* Tabs - smart phone
+* Pads - tablet
+* Boards - white boards
+* These devices are going to be everywhere
+* Wireless
+* The amount of ubiqituous computing is more than traditional computing
+* These smart devices can be used to build smart environments and interaction
+{{./pasted_image.png}}
+
+
+==== ABOWD2016 full paper ====
+* from ubiquitous to collective
+* Goes through the three past eras: mainframe, pc, ubiqutous
+* Propose collective
+* Cloud: www, distributed systems, cloud computing
+* Crowd: physical replacement. Peoples opinions and so forth. 
+* Shroud: IoT devices. the technologies that can give info.
+* We are to combine these in a collective manner, to build killer applications. 
+* Example Health: Shroud has wearables and different devices to retrive data from people. Crowd has specialiced people that can come with inpu on diagnosis. Cloud can do machine learning on the data. 
+* We dont care if the decision comes from cloud or crowd. 
+* The three work together to get a better result. 
 
 ===== Slides =====
 
+==== Overview ====
+{{./pasted_image001.png}}
+==== History ====
+{{./pasted_image002.png}}
+{{./pasted_image003.png}}
+{{./pasted_image004.png}}
+{{./pasted_image005.png}}
+==== Key Concepts ====
+1. Calm technology
+2. Invisible computing
+3. Implicit HCI
+4. Context awareness
+5. Location awareness
+6. Automated capture & access
+7. Activity modelling & recognition
+8. Smart dervices, Smart objects & Internet-of-things
+9. Smart spaces & Smart / Intelligent Environments
+10. Natural interfaces & Continuous interaction
+{{./pasted_image008.png}}
+{{./pasted_image007.png}}
+==== Enabling Technologies ====
+{{./pasted_image006.png}}
+
+{{./pasted_image009.png}}
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+{{./pasted_image012.png}}
+{{./pasted_image013.png}}
+{{./pasted_image014.png}}

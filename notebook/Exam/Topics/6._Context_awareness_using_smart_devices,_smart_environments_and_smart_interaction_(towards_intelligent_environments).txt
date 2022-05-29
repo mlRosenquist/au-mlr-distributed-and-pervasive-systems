@@ -5,14 +5,118 @@ Creation-Date: 2022-05-26T08:54:45+02:00
 ====== 6. Context awareness using smart devices, smart environments and smart interaction (towards intelligent environments S 9 + 10) ======
 
 ===== Litterature =====
-* POSLAD2009 chapter 2 & 7 + 8
-* (POSLAD2009): Ubiquitous computing : smart device, environment, and interactions / Stefan Poslad. ISBN 978 0 470 03560 3
-* POSLAD2009 chapter 8
-* AMADOR-DOMINDUEZ2019 paper online
-* RIBONI2020 paper online
-* (POSLAD2009): Ubiquitous computing : smart device, environment, and interactions / Stefan Poslad. ISBN 978 0 470 03560 3
-* (AMADOR-DOMINDUEZ2019): Prediction and Decision-Making in Intelligent Environments Supported by Knowledge Graphs, A Systematic Review. / Elvira Amador-Domínguez  , Emilio Serrano, Daniel Manrique, and Juan F. De Paz
-* (RIBONI2020) Unsupervised Recognition of Multi-Resident Activities in Smart-Homes DANIELE RIBONI , (Member, IEEE), AND FLAVIA MURRI
+
+==== POSLAD2009 chapter 2 ====
+* Calm Technology
+	* epower our prephery in three ways
+		* engage both the centre of our locus of attention and the prephery of our attention
+		* enhance our peripheral reach by brining more details into the perephery
+		* offer location awareness when our preiphery is functioning well
+
+==== POSLAD2009 chapter 7 ====
+* Context Aware Systems
+* Aware of their situation in physical, virtua and user environment. Can adapt this in some way. 
+* Environment context: locationm time, person, ict system
+* How applications adapt themselves to the context
+* Passive the user is presented the context and adapts. Active the system adapts the context for the user. 
+* Context presentation, tagging, filtering, based task
+* Modelling
+	* what the contexts describe and contextexts are, created, composed and used. 
+	* Types
+		* what,who,where,when,how its accessed and why it is usefu
+	* creating and decomposition
+		* combing simpler contexts
+			* loacation, time, user -> meeting
+		* combining homogenous contexts
+			* multiple independent sensors
+		* combining heterogenous contexts
+			* composite
+		* derive high context from low
+			* time, location -> metting
+		* derive low context from high
+			* meeting -> time
+		* creation, modification, deletion
+		* security, privacy
+	* Context aware adaption
+		* relation of current cotnext to the goal context that is the essence
+		* only those that are relevant to goal
+	* Context representation
+		* 6 types, key value, markup, graphical, Object oriented, logic, ontology
+	* Lifecycle: 
+		* Context determination
+			* compute sensor into data for computation
+		* user context acquisition
+			* get the goal user context
+		* Context processing
+			* process and adapt active/passive
+		* Context management
+			* Store the process
+	* Challenges
+		* Incomplete, incorrect or imprecise -> false positive and false negatives for user contexts
+* Mobility Awareness
+	* Location
+	* Phone
+	* GPS
+* Spatial Awareness
+	* Location aware system
+	* Passitive relative or absolute location
+	* Active updated current position and routes on mpas
+	* GPS, bluetooth, infrared and wifi
+	* Spatation context creation
+		* Lateration
+			* time of right / RSSI
+		* Angulation
+			* Angle measurements with at least one known distance
+			* aircraft Omi direction raning
+		* Coordinate is not enough - need to know what is there for context
+* Temporal awareness
+	* Coordinating and scheduling
+	* Time
+	* clock synch
+* ICT System awareness
+	* transparent 
+	* UI
+	* UI adaption to context
+	* QOS changes when moving
+	* Service discovery
+	* underlay network aware
+
+==== POSLAD2009 chapter 8 ====
+
+==== AMADOR-DOMINDUEZ2019 paper online ====
+
+==== RIBONI2020 paper online ====
 
 ===== Slides =====
 
+==== Context ====
+
+=== Context Awareness ===
+{{./pasted_image001.png}}
+{{./pasted_image002.png}}
+{{./pasted_image.png}}
+
+{{./pasted_image003.png}}
+{{./pasted_image004.png}}
+{{./pasted_image006.png}}
+{{./pasted_image018.png}}
+=== Lifecycle ===
+{{./pasted_image005.png}}
+=== Context Composition ===
+{{./pasted_image007.png}}
+=== Context Adaption ===
+{{./pasted_image008.png}}
+=== Context Modelling ===
+{{./pasted_image009.png}}
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+=== Context Reasoning ===
+{{./pasted_image012.png}}
+{{./pasted_image014.png}}
+{{./pasted_image015.png}}
+{{./pasted_image016.png}}
+{{./pasted_image017.png}}
+
+=== Time Awareness ===
+{{./pasted_image013.png}}
+==== Intelligent Environments ====
