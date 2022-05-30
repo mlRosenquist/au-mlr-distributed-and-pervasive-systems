@@ -2,12 +2,13 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2022-05-26T08:54:45+02:00
 
-====== 6. Context awareness using smart devices, smart environments and smart interaction (towards intelligent environments S 9 + 10) ======
+====== 6. Context awareness using smart devices, smart environments and smart interaction (towards intelligent environments) S 9 + 10) ======
 
 ===== Litterature =====
 
 ==== POSLAD2009 chapter 2 ====
 * Calm Technology
+201985
 	* epower our prephery in three ways
 		* engage both the centre of our locus of attention and the prephery of our attention
 		* enhance our peripheral reach by brining more details into the perephery
@@ -82,10 +83,120 @@ Creation-Date: 2022-05-26T08:54:45+02:00
 	* underlay network aware
 
 ==== POSLAD2009 chapter 8 ====
+* Intelligent Systems (IS)
+* IS Architectures
+	* Reactive IS Models
+	* Environment Model Based IS
+	* Goal Based IS
+	* Utility Based IS
+	* Hybrid IS
+	* Knowledge based IS 
+* Semantic KB IS
+	* Knowledge database 
+	* closed world 
+	* prolog
+* Classical Logic IS
+	* Propositional and Predicate Logic
+	* Reasoning
+* Soft Computing IS Models
+	* Probalistics - percentage analysis of context
+* IS System Operations
+	* Searching
+	* Classic Planning
 
 ==== AMADOR-DOMINDUEZ2019 paper online ====
+* KBs
+	* convert unstructured data into knowledge using ontologies.
+	* Formal reasoning
+	* ML - SV and UV
+* Knowledge Graph Embedding
+* Planning
+	* define protocol, parameters and scope
+* Review
+	* idenitify which are the fundamental uses of knowledge bases in intelligent environments
+* Ambient intelligence 
+	* phones
+	* social networks as data source
+	* smarter sensors - KB makes this data relevant
+* Categories - health, housing, education, mobility, risk and resource mgmt., mutidomain and government
+	* health - build KB of combination of sensors and medical reports
+	* mobility - 
+	* risk and resource - 
+	* housing - task recognition
+		* data by sensors contextualized employing ontolies to create a KB
+		* Computer vision
+	* Government
+		* increased digitalization
+		* fuzzy logic rule system
+		* citizen query
+		* crowdsourced data
+	* Education
+	* Multidomain
+* General 
+	* Data generation
+		* sensors
+		* crowdsourcing
+		* reuse existing kbs
+	* Contextualization
+		* different domain ontologies to generate kbs
+* Decision-making and predictive models
+	* scalability, interpretability, predictive capability and resource consumption
+	* rule-oriented - experts look at kb and define
+	* machine learning: neural networks, bayesian regression
+		* explain prediction
+* Knowledge Graph Embedding for smart Homes
+	* Knowledge Graph is a formalization of Knowledge Base
+	* Objects are nodes in a graph - edges indicate relations
+	* KB in Resource Description framework is a KG where a fact presents existing relathionship
+	* Google Assistant built over google knowledge graph
+	* smart home for eldercare
+	* task recognition - main problem
+		* three elemnts compose a fact: subject, relation and object
+		* Know two out of three - goal to predict missing element - triple or link prediction
+	* Symptom Detection
+	* Personal Assistance
+		* KG has reminders
+		* guding activities
+		* brush teeth, needs instrument, toothpase
+* Conclusion
+	* identified application of kbs to iEnvironment - health and mobility
+	* primary data from sensors and citcens, reuse existing kbs
+	* Rue-based appraches most up and coming decision-making models
+	* Presented models has - High interpretability, low ress consumption, scalability limitation
 
 ==== RIBONI2020 paper online ====
+* Unsupervised recognition of Multi-Resident activies in smart-homes
+* Getting labelled data takes time and affects privacy of recidents
+* Introduction
+	* state-of-the-art assumes single-reisdent
+	* existing multi-resident techniques
+		* data associations
+		* activity recognition - hidden markov models (ML)
+		* supervised learning - privacy, overhead
+	* propsoed:
+		* weaker form of data association - resident separation - pair of observed sensor events same resident or different
+		* Knowledge based reasoning
+		* semantic correlation among sensor events
+		* OWL 2 ontology
+		* Good performance in determining resident and activity
+		* no cameras or wearables
+* multi-inhabitant activity recognition system
+	* sensor installation -> data qcquisition -> resident separation -> activity recognition
+	* sensor installation
+		* set up
+	* data acquisition
+		* retrieve data from single resident doing activities
+	* resident separation
+		* system procces data and build model
+		* binary classification - same resident or not
+		* temporal proximity - different people
+	* activity recognition
+		* determine activity
+		* get results from resident separation model and stream of sensor events
+		* Unsupervised hidden markov model with resident separation
+		* Ontology: PreparingHotMeal as an activity that requires the usage of a CookingIstrument
+			* detectsUsageOf an instance of Oven which is subclass of CookingUstrument
+			* -> cooking hot meal
 
 ===== Slides =====
 
@@ -120,3 +231,41 @@ Creation-Date: 2022-05-26T08:54:45+02:00
 === Time Awareness ===
 {{./pasted_image013.png}}
 ==== Intelligent Environments ====
+
+=== Smart & intelligent environments ===
+{{./pasted_image019.png}}
+{{./pasted_image020.png}}
+{{./pasted_image021.png}}
+
+=== Smart spaces ===
+{{./pasted_image022.png}}
+{{./pasted_image023.png}}
+{{./pasted_image024.png}}
+
+=== Examples ===
+{{./pasted_image026.png}}
+{{./pasted_image027.png}}
+=== Enabling technologies ===
+
+=== Data Sources ===
+{{./pasted_image028.png}}
+{{./pasted_image029.png}}
+{{./pasted_image030.png}}
+=== Smart X ===
+{{./pasted_image031.png}}
+=== Interaction ===
+{{./pasted_image033.png}}
+{{./pasted_image032.png}}
+{{./pasted_image034.png}}
+{{./pasted_image035.png}}
+=== Service Discovery ===
+{{./pasted_image036.png}}
+{{./pasted_image037.png}}
+{{./pasted_image038.png}}
+{{./pasted_image039.png}}
+{{./pasted_image040.png}}
+{{./pasted_image041.png}}
+{{./pasted_image042.png}}
+{{./pasted_image043.png}}
+{{./pasted_image044.png}}
+{{./pasted_image045.png}}

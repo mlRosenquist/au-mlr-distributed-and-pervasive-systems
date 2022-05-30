@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2022-05-30T12:24:01+02:00
+
+====== 1. Synchronization ======
+
+===== Motivation =====
+* Challenges of distributed systems 
+	* No global clock
+* Stock market buy and sell orders
+* Need some common notion of real or logicam time -> real/logical clocks
+
+===== Challenges =====
+* Logical: chronical local and global event ordering, initial and on-going corrections
+* Real: Precise synchronization, clock drift (environmental), on-going corrections
+
+===== Techniques =====
+
+==== Real ====
+
+=== Precision Time Protocol (PTP) ===
+* IEEE standard - v2 with improvements
+* Synchronize clocks in network - ethernet
+* nano second accuracy
+* Distributed real-time system
+* Method
+	* Application layer
+	* Timestamp in HW - time stamp unit
+	* Phases: Offset Correction, Delay Correction
+* Topology
+	* Switch with bundary clock
+	* Hierarchy
+
+==== Logical ====
+* Cronological event ordering accros nodes
+* Absence of synch real clocks
+* Logical ordering
+* Locical clock synchronized
+
+=== Lamport time stamp ===
+* Increments counter at lock event
+* counter included when sending
+* on receive update dependent on current and received
+* Happend before relation  e_1 -> e_2 => C(e_1) < C(e_2)
+* Clock consistency, contrapositive
+https://aeroncookbook.com/distributed-systems-basics/logical-clocks/
+{{./pasted_image.png}}
+=== Vector Clock ===
+* Time stamps couldnt tell if a message was concurrent
+* Strong clock consistency
+* detects causaility vialation unseen by lamport timestamps. necessary (timestamp) and sufficient(vector clocks) causality
+https://www.geeksforgeeks.org/vector-clocks-in-distributed-systems/
+{{./pasted_image002.png}}
+
+===== Perspective =====
+* RAFT - replicated logging
+
